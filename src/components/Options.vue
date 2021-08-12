@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mb-2">
     <div class="card mx-auto" style="max-width: 540px;">
       <div class="card-body">
         <div

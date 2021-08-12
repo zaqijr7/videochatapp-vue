@@ -22,10 +22,10 @@ export default {
     VideoPlayer,
   },
   mounted() {
-    this.$store.commit(
-      "setSocket",
-      io("https://video-chat-nvn.herokuapp.com/")
-    );
+    const a = io("https://video-chat-nvn.herokuapp.com/");
+    this.$store.commit("setSocket", a);
+
+    console.log(this.socket);
 
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: true })

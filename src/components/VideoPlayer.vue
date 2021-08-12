@@ -8,7 +8,12 @@
               <div class="card-body">
                 <h5 class="card-title">{{ "User 1" }}</h5>
                 <p class="card-text">
-                  <video playsInline muted :ref="myVideo" autoPlay />
+                  <video
+                    playsInline
+                    muted
+                    :ref="this.$store.state.myVideo"
+                    autoPlay
+                  />
                 </p>
               </div>
             </div>
@@ -21,9 +26,8 @@
                   <video
                     playsInline
                     muted
-                    :ref="userVideo"
+                    :ref="this.$store.state.userVideo"
                     autoPlay
-                    className="{classes.video}"
                   />
                 </p>
               </div>
@@ -60,6 +64,11 @@ export default {
     call() {
       return this.$store.state.call;
     },
+  },
+
+  mounted() {
+    console.log(this.myVideo);
+    console.log(this.userVideo);
   },
 };
 </script>
